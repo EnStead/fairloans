@@ -320,6 +320,14 @@ h3{
   display: block;
   font-size: 14px;
 }
+.sub-footer-links{
+  color: black;
+  /* text-decoration: none; */
+  /* margin: 5px 15px; */
+  font-weight: 500;
+  display: none;
+  font-size: 14px;
+}
 .footer-logo {
   font-size: 24px;
   font-weight: bold;
@@ -660,6 +668,18 @@ h3{
     padding-left: 12px !important;
   }
 
+  .sub-footer-links{
+    color: black;
+    /* text-decoration: none; */
+    /* margin: 5px 15px; */
+    font-weight: 500;
+    display: block;
+    font-size: 14px;
+  }
+
+  .footer-links{
+    display: none;
+  }
 
 }
 
