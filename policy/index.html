@@ -10,7 +10,7 @@
         rel="stylesheet"
         href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body >
@@ -19,7 +19,7 @@
             <div class="navbar-wrapper" >
                 <nav class="navbar sticky-top" >
                 <div class="container-fluid nev">
-                <a class="navbar-brand" href="/"><img src="images/logo.svg" alt="logo" class="logo" width="80%"  /></a>         
+                <a class="navbar-brand" href="/"><img src="/images/logo.svg" alt="logo" class="logo" width="80%"  /></a>         
                 <div class="tuff" >
                     <a id="customLink" href="get-started.html" class="get_btn_dek"  style="text-decoration: none; color: var(--white); background-color: var(--blue); border-radius: 8px; padding: 10px 40px; font-size: 16px; font-weight: 700; " >Apply For Loan</a>
                 </div>
@@ -236,7 +236,7 @@
             <div class="row">
 
               <span class="col-md-5 footer-logo">
-                <a class="navbar-brand" href="index.html"><img src="images/logo.svg" alt="logo" class="logo"  /></a>
+                <a class="navbar-brand" href="/"><img src="/images/logo.svg" alt="logo" class="logo"  /></a>
               </span>
 
               <div class="col-md-7 footer-links">
@@ -244,14 +244,14 @@
                   <div class="col-4 footlink">
                     <span> <a href="/">Home</a> </span>
                     <span > <a href="/#about">About</a> </span>
-                    <span> <a href="consent.html"> E-Consent</a></span>
+                    <span> <a href="/consent"> E-Consent</a></span>
                     <span> <a  href="https://cmi.rocks/go/67b8b9159014f?aff_utm_source=fb&aff_utm_medium=ads&aff_utm_campaign=EA">Check Your Credit Score</a> </span>
                   </div>
                   <div class="col-5 footlink" >
-                    <span> <a href="lending.html" styl > Lending Policy</a></span>
-                    <span> <a href="policy.html"> Privacy Policy</a></span>
-                    <span> <a href="terms.html">Terms and Conditions</a> </span>
-                    <span> <a href="rate.html">Rate & Fees</a> </span>
+                    <span> <a href="/lending" styl > Lending Policy</a></span>
+                    <span> <a href="/policy"> Privacy Policy</a></span>
+                    <span> <a href="/terms">Terms and Conditions</a> </span>
+                    <span> <a href="/rate">Rate & Fees</a> </span>
                   </div>
                   <!-- Social Media Icons -->
                   <div class="col-3 soc_link">
@@ -259,10 +259,10 @@
                       <span style="font-weight: 700;" >Phone Number</span> <br> <span class="fts" >+1 (786) 310 4381</span>
                     </div>
                     <a href="https://www.facebook.com/profile.php?id=61573953050711&sfnsn=wa" target="_blank" >
-                        <img src="images/facebook.svg" alt="">
+                        <img src="/images/facebook.svg" alt="">
                       </a>
                       <a href="https://www.instagram.com/fairloans_ca?igsh=NWpqd3E2b20yZzZn" target="_blank" >
-                        <img src="images/instagram.svg" alt="" class="soc_insta"  style="margin-left: 20px;" >                    
+                        <img src="/images/instagram.svg" alt="" class="soc_insta"  style="margin-left: 20px;" >                    
                       </a>
                   </div>
                 </div>
@@ -273,14 +273,14 @@
                   <div class="col-6 footlink">
                     <span> <a href="/">Home</a></span>
                     <span> <a href="#about">About</a></span>
-                    <span> <a href="consent.html"> E-Consent</a></span>
+                    <span> <a href="/consent"> E-Consent</a></span>
                     <span> <a  href="https://cmi.rocks/go/67b8b9159014f?aff_utm_source=fb&aff_utm_medium=ads&aff_utm_campaign=EA">Check Your Credit Score</a> </span>
                   </div>
                   <div class="col-6 footlink" >
-                    <span> <a href="lending.html" > Lending Policy</a></span>
-                    <span> <a href="policy.html"> Privacy Policy</a></span>
-                    <span> <a href="terms.html">Terms and Conditions</a> </span>
-                    <span> <a href="rate.html">Rate & Fees</a> </span>
+                    <span> <a href="/lending" > Lending Policy</a></span>
+                    <span> <a href="/policy"> Privacy Policy</a></span>
+                    <span> <a href="/terms">Terms and Conditions</a> </span>
+                    <span> <a href="/rate">Rate & Fees</a> </span>
                   </div>
                   
                 </div>
@@ -289,10 +289,10 @@
               <!-- Social Media Icons -->
               <div class="col-12 out_lin ">
                 <a href="https://www.facebook.com/profile.php?id=61573953050711&sfnsn=wa" target="_blank" >
-                    <img src="images/facebook.svg" alt="">
+                    <img src="/images/facebook.svg" alt="">
                   </a>
                   <a href="https://www.instagram.com/fairloans_ca?igsh=NWpqd3E2b20yZzZn" target="_blank" >
-                    <img src="images/instagram.svg" alt="" class="soc_insta"  style="margin-left: 20px;" >                    
+                    <img src="/images/instagram.svg" alt="" class="soc_insta"  style="margin-left: 20px;" >                    
                   </a>
                 <span class="fst" style="font-size: 14px; margin-left: 10px; font-weight: 700; "  >+1 (786) 310 4381</span>                
               </div>
@@ -315,26 +315,35 @@
     <!-- BOOTSTRAP -->
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            console.log("Script loaded and running!"); // Debugging log
-      
-            function updateURL(buttonId, newUrl) {
-                let button = document.getElementById(buttonId);
-                if (button) {
-                    button.addEventListener("click", function (event) {
-                        event.preventDefault();
-                        console.log(`Redirecting ${buttonId} to:`, newUrl); // Debugging log
-                        window.location.href = newUrl;
-                    });
-                } else {
-                    console.error(`Button with ID '${buttonId}' not found!`);
-                }
-            }
-      
-            updateURL("customLink", "get-started.html?affiliate_id=1882&product_names=personal_loan");
-            updateURL("customLink1", "get-started.html?affiliate_id=1882&product_names=personal_loan");
-            updateURL("customLink2", "get-started.html?affiliate_id=1882&product_names=personal_loan");
-            });
+      document.addEventListener("DOMContentLoaded", function () {
+          console.log("Script loaded and running!"); // Debugging log
+  
+          function updateURL(buttonId, newUrl) {
+              let button = document.getElementById(buttonId);
+              if (button) {
+                  button.addEventListener("click", function (event) {
+                      event.preventDefault();
+                      console.log(`Redirecting ${buttonId} to:`, newUrl); // Debugging log
+                      window.location.href = newUrl;  // ✅ Redirects while keeping query params
+                  });
+              } else {
+                  console.error(`Button with ID '${buttonId}' not found!`);
+              }
+          }
+  
+          let baseUrl = "/get-started/"; // ✅ Use absolute path
+          let queryParams = window.location.search; // ✅ Get query params from current URL
+  
+          if (!queryParams) {
+              queryParams = "?affiliate_id=1882&product_names=personal_loan"; // Fallback if no query params
+          }
+  
+          let fullUrl = baseUrl + queryParams; // ✅ Ensure query params are attached
+  
+          updateURL("customLink", fullUrl);
+          updateURL("customLink1", fullUrl);
+          updateURL("customLink2", fullUrl);
+      });
     </script>
 
 

@@ -478,14 +478,14 @@
                   <div class="col-md-4 col-sm-5 footlink">
                     <span> <a href="/">Home</a></span>
                     <span> <a href="#about">About</a></span>
-                    <span> <a href="/consent"> E-Consent</a></span>
+                    <span> <a href="consent"> E-Consent</a></span>
                     <span> <a  href="https://cmi.rocks/go/67b8b9159014f?aff_utm_source=fb&aff_utm_medium=ads&aff_utm_campaign=EA">Check Your Credit Score</a> </span>
                   </div>
                   <div class="col-md-5 col-sm-5 footlink" >
-                    <span> <a href="lending.html" > Lending Policy</a></span>
-                    <span> <a href="policy.html"> Privacy Policy</a></span>
-                    <span> <a href="terms.html">Terms and Conditions</a> </span>
-                    <span> <a href="rate.html">Rate & Fees</a> </span>
+                    <span> <a href="/lending" > Lending Policy</a></span>
+                    <span> <a href="/policy"> Privacy Policy</a></span>
+                    <span> <a href="/terms">Terms and Conditions</a> </span>
+                    <span> <a href="/rate">Rate & Fees</a> </span>
                   </div>
                   <!-- Social Media Icons -->
                   <div class="col-md-3 soc_link col-sm-2 ">
@@ -507,14 +507,14 @@
                   <div class="col-6 footlink">
                     <span> <a href="/">Home</a></span>
                     <span> <a href="#about">About</a></span>
-                    <span> <a href="consent.html"> E-Consent</a></span>
+                    <span> <a href="consent"> E-Consent</a></span>
                     <span> <a  href="https://cmi.rocks/go/67b8b9159014f?aff_utm_source=fb&aff_utm_medium=ads&aff_utm_campaign=EA">Check Your Credit Score</a> </span>
                   </div>
                   <div class="col-6 footlink" >
-                    <span> <a href="lending.html" > Lending Policy</a></span>
-                    <span> <a href="policy.html"> Privacy Policy</a></span>
-                    <span> <a href="terms.html">Terms and Conditions</a> </span>
-                    <span> <a href="rate.html">Rate & Fees</a> </span>
+                    <span> <a href="lending" > Lending Policy</a></span>
+                    <span> <a href="policy"> Privacy Policy</a></span>
+                    <span> <a href="terms">Terms and Conditions</a> </span>
+                    <span> <a href="rate">Rate & Fees</a> </span>
                   </div>
                   
                 </div>
@@ -558,24 +558,32 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
           console.log("Script loaded and running!"); // Debugging log
-    
+  
           function updateURL(buttonId, newUrl) {
               let button = document.getElementById(buttonId);
               if (button) {
                   button.addEventListener("click", function (event) {
                       event.preventDefault();
                       console.log(`Redirecting ${buttonId} to:`, newUrl); // Debugging log
-                      window.location.href = newUrl;
+                      window.location.href = newUrl;  // ✅ Redirects while keeping query params
                   });
               } else {
                   console.error(`Button with ID '${buttonId}' not found!`);
               }
           }
-    
-          updateURL("customLink", "get-started.html?affiliate_id=1882&product_names=personal_loan");
-          updateURL("customLink1", "get-started.html?affiliate_id=1882&product_names=personal_loan");
-          updateURL("customLink2", "get-started.html?affiliate_id=1882&product_names=personal_loan");
-          
+  
+          let baseUrl = "/get-started/"; // ✅ Use absolute path
+          let queryParams = window.location.search; // ✅ Get query params from current URL
+  
+          if (!queryParams) {
+              queryParams = "?affiliate_id=1882&product_names=personal_loan"; // Fallback if no query params
+          }
+  
+          let fullUrl = baseUrl + queryParams; // ✅ Ensure query params are attached
+  
+          updateURL("customLink", fullUrl);
+          updateURL("customLink1", fullUrl);
+          updateURL("customLink2", fullUrl);
       });
     </script>
     
