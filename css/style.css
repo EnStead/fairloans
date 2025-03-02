@@ -353,7 +353,7 @@ h3{
 }
 
 .soc_link a {
-  text-decoration: none;
+  text-decoration: none !important;
   /* color: black; */
 }
 
@@ -362,7 +362,7 @@ h3{
 }
 
 .out_lin a{
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .fts{
