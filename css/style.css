@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  
+:root {
+  /* THEME COLOURS */
+  --dark_black: #151515;
+  --dark_grey: #212529;
+  --blue: #006BE8;
+  --grey:#6F6969;
+  --white: #FFFFFF;
+  --off_green: #1B424C;
+  --whitish: #E8F3FF;
+  --off_white: #F8F8F8;
+  --light_blue:#CBE3FF;
+  --blueish: #3B82F6;
+  --greyish: #DEE2E6;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  
+  background-color: var(--white);
+  color: var(--dark_black);
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+p{
+  font-size: 1rem;
+  
+}
+
+.alone{
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+h1{
+  font-size: 2.5rem;
+  color: var(--dark_black);
+  font-weight: 800;
+}
+
+h2{
+  font-size: 2rem;
+  color: var(--dark_black);
+  font-weight: 600;
+}
+
+h3{
+  font-size: 20px;
+}
+
+
+
+/* NAVBAR STYLES */
+
+.navbar{
+  padding: 10px 40px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(10px); /* Apply background blur */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  max-width: 1300px;
+  margin: auto;
+  z-index: 11;
+}
+
+.navbar-wrapper {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  background: var(--red); /* Match the navbar background */
+  z-index: 1; /* Put it behind the navbar */
+  height: 80px; /* Adjust to fit the navbar height */
+}
+
+.nev{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.nbDesk{
+  
+  flex: 50% !important;
+  justify-content: space-evenly !important; 
+ 
+}
+
+.nav-link{
+  color: var(--dark_blue) !important;
+  font-weight: 500;
+}
+
+.nav-item{
+  padding: 0 10px 0 10px !important;
+  /* margin: 0 5px 0 5px !important; */
+}
+
+.highlight {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--white); /* White text */
+  /* font-weight: bold; */
+  /* display: inline-block; */
+  padding: 0px 23px;
+  margin-left: -10px;
+  background-image: url(/images/union.png);
+}
+
+.shade{
+  position: relative;
+  
+}
+
+.get_btn_mob{
+  display: none;
+}
+
+
+.hero_card_mini{
+  display: none;
+}
+
+.hero_btn{
+  padding: 0px !important;
+}
+/* About Section */
+
+
+.blue-card {
+  background-color: var(--blue); /* Adjust to match design */
+  color: var(--white);
+  padding: 40px;
+  border-radius: 24px;
+  min-height: 500px;
+  position: relative;
+}
+.info-box {
+  background-color: var(--off_white);
+  padding: 80px 40px 40px;
+  border-radius: 24px;
+  font-size: 20px;
+}
+.feature-card {
+  color: white;
+  padding: 30px;
+  border-radius: 24px;
+  text-align: left;
+  background-position: center; 
+  background-size: cover;
+  min-height: 240px;
+  /* display: flex; */
+  
+}
+
+
+/* Work Section */
+
+.work-card{
+  background-color: var(--white);
+  border: 1px solid var(--light_blue);
+  box-shadow: -4px 10px 0px  rgba(59, 130, 246, 1);
+  border-radius: 10px;
+  padding: 30px;
+  /* width: 400px; */
+  height: 300px;
+}
+
+
+
+
+/* Testimonial Section */
+.testimonial-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: var(--off_white);  
+  padding: 30px;
+  background-image: url(/images/test_watermark.svg);
+  background-position: center; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+  width: max-content;
+}
+
+/* Duplicate testimonials inside wrapper */
+.testimonial-wrapper > * {
+  flex: 0 0 auto;
+}
+
+
+
+/* Hover effect to pause the scrolling */
+.testimonial-container:hover .testimonial-wrapper {
+  animation-play-state: paused;
+}
+
+
+.testimonial-card {
+  width: 350px; /* Adjust width to fit the layout */
+  min-width: 350px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  white-space: normal; /* Allow text wrapping */
+  word-wrap: break-word; /* Ensure long words break properly */
+}
+
+/* Smooth scrolling effect */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Acordian */
+
+/* Default (Closed) State */
+.accordion-item {
+  background-color: var(--white) !important; /* Ensure it starts with white */
+  border: none;
+  border-radius: 10px;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important; /* Removes blue outline */
+  outline: none !important; /* Ensures no default outline */
+}
+
+
+/* Accordion Header (Closed) */
+.accordion-button {
+  background-color: var(--white) !important; /* Default background */
+  color: var(--dark_blue) !important;
+  margin-bottom: 0 !important;
+  font-weight: 500 !important;
+  font-size: 20px;
+}
+
+/* Accordion Header (Open/Active) */
+.accordion-button:not(.collapsed) {
+  background-color: var(--off_white) !important; /* Active background */
+  color: var(--dark_black) !important;
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+}
+
+/* Ensure the content inside the open accordion gets a grey background */
+.accordion-collapse.show {
+  background-color: var(--off_white) !important;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* Reset closed state styles explicitly */
+.accordion-button.collapsed {
+  background-color: var(--white) !important;
+  color: var(--dark_blue) !important;
+}
+
+
+/* Custom Styles */
+.footer-container {
+  position: relative;
+  background-color: #E5F1FA; /* Light Blue */
+  padding-top: 100px; /* Extra space for the overlapping section */
+  margin-top: 100px;
+}
+.footer-top {
+  position: absolute;
+  top: -20%; /* Moves it halfway inside */
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--off_green); /* Dark Green */
+  color: white;
+  padding: 40px;
+  border-radius: 30px;
+  text-align: left;
+  width: 90%;
+  max-width: 1400px;
+}
+.footer-bottom {
+  padding: 120px 80px 40px;
+  text-align: left;
+}
+.footer-links{
+  color: black;
+  /* text-decoration: none; */
+  /* margin: 5px 15px; */
+  font-weight: 500;
+  display: block;
+  font-size: 14px;
+}
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+}
+.footlink span {
+  display: block;
+  padding: 10px 0;
+}
+.footlink span a {
+  text-decoration: none;
+  color: black;
+}
+.disclaimer {
+  font-size: 14px;
+  color: var(--grey);
+  font-size: 10px;
+  max-width: 1400px;
+  margin: auto;
+  line-height: 1.6;
+  border-top: 1px solid var(--grey);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.soc_link{
+  padding: 0px !important;
+}
+
+.out_lin{
+  display: none;
+}
+
+.fts{
+  font-size: 14px !important;
+}
+
+
+
+/* MEDIA QUERIES STARTS HERE*/
+
+@media (min-width:1920px) {
+  .cnt{
+    max-width: 1300px !important;
+    margin: auto !important;
+  }
+
+  .abf{
+    height: 40vh !important;
+  }
+
+}
+
+
+
+@media ( max-width:1286px){
+
+  .arr{
+    right: 400px !important;
+    bottom: 200px !important;
+  }
+
+  .arr img{
+    width: 80% !important;
+  }
+/* 
+  .hero{
+    padding: 10px 40px;
+  } */
+
+  .hero_card{
+    right: 30px !important;
+  }
+
+  /* .work-card{
+    width: none;
+    height: 300px;
+  } */
+  
+}
+
+@media ( max-width:1250px){
+  .ft_btn{
+    font-size: 14px !important;
+    padding: 10px 10px !important ;
+  }
+
+  .navbar{
+    padding: 10px 40px;
+    max-width: 1100px !important;
+
+  }
+  
+}
+
+@media ( max-width:1200px){
+ 
+
+  .navbar{
+    padding: 10px 40px !important;
+    max-width: 1000px !important;
+
+  }
+
+  .arr{
+    right: 370px !important;
+    bottom: 220px !important;
+  }
+
+  .arr img{
+    width: 70% !important;
+  }
+
+  .hero, .ft, #faq, #why{
+    padding: 10px 50px !important;
+  }
+ 
+  #work{
+    padding: 70px 30px !important;
+  }
+
+  .soc_insta{
+    margin-left: 0px !important;
+  }
+
+}
+
+@media (max-width:1152px) {
+
+
+  .hero_card{
+    right: 0px !important;
+  }
+
+  .arr{
+    right: 340px !important;
+  }
+
+  .work-card{
+    padding: 30px 20px;
+
+    height: 380px;
+  }
+  
+
+}
+
+@media (max-width:1051px){
+
+  
+  .navbar{
+    padding: 10px 40px !important;
+    max-width: 900px !important;
+
+  }
+
+  .arr, .hero_card{
+    display: none;
+  }
+
+  .hero_card_mini{
+    display: block;
+  }
+
+  .stack_img{
+    margin: 30px 0px !important;
+  }
+}
+
+@media ( max-width:960px){
+
+  .fts{
+    font-size: 12px !important;
+  }
+
+  .navbar{
+    padding: 10px 40px !important;
+    max-width: 800px !important;
+  }
+
+  .hero{
+    text-align: center;
+  }
+
+  .hero h1{
+    font-size: 30px ;    
+  }
+
+  .hero a{
+    padding: 15px 30px !important; 
+    font-size: 15px !important;
+  }
+
+  .wrk{
+    padding: 40px 0;
+  }
+  .custom-responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .custom-responsive .col {
+    width: 100%;
+  }
+
+  .ft_btn{
+    font-size: 14px !important;
+    padding: 10px 10px !important ;
+  }
+
+ 
+  #work{
+    padding: 70px 30px !important;
+    margin: 0px !important;
+  }
+
+  .hero, #about{
+    padding: 10px 30px !important;
+  }
+
+  #faq{
+    padding: 80px 30px !important;
+  }
+
+  .footer-bottom {
+    padding: 120px 30px 40px !important;
+  }
+
+  .ft_btn{
+    font-size: 14px !important;
+    padding: 10px 40px !important ;
+  }
+
+  .hero_btn{
+    flex-wrap: wrap;
+    justify-content:flex-start !important;
+    margin: 20px 0px !important;
+  }
+
+  .stack_img img {
+    width: 25% !important;
+  }
+
+}
+
+@media ( max-width:768px){
+
+  .navbar{
+    padding: 10px 40px !important;
+    max-width: 600px !important;
+  }
+
+  .hero, #faq, #about{
+    padding: 10px 20px !important;
+  }
+  
+  #faq{
+    padding: 80px 20px 120px !important;
+  }
+
+  .footer-bottom {
+    padding: 120px 20px 40px !important;
+  }
+
+
+
+
+  .logo{
+    width: 80% !important;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+  
+  h2{
+    /* font-size: 20px; */
+  }
+  
+  h3{
+    font-size: 1rem;
+  }
+
+  .footer-logo a img {
+    width: 40% !important ;
+    display: block;
+  }
+
+}
+
+@media (max-width: 570px) {
+
+  .stack_img img {
+    width: 35% !important;
+  }
+
+  .navbar-brand{
+    width:  40% !important;
+  }
+
+  .get_btn_dek{
+    font-size: 14px !important;
+    padding: 10px 10px !important ;
+  }
+
+  .navbar{
+    padding: 10px 40px !important;
+    max-width: 400px !important;
+  }
+
+  .out_lin{
+    display: block;
+    margin: 10px 0;
+  }
+
+  .soc_link{
+    display: none;
+  }
+
+  .footer-bottom {
+    padding: 180px 20px 40px !important ;
+  }
+
+  .hero_btn{
+    padding-left: 12px !important;
+  }
+
+
+}
+
+@media (max-width: 488px) {
+
+  .hero h1{
+    line-height: 45px !important;
+  }
+
+  .hero_card_mini{
+    width: 100% !important ;
+    padding: 20px 10px !important;
+  }
+  .nv_btn{
+    padding: 10px 20px !important;
+    font-size: 14px !important ;
+  }
+
+  .hero{
+    padding: 10px 0px !important;
+  }
+
+  .blue-card {   
+    padding: 20px !important ;
+  }
+  .why_sec{
+    padding: 0px !important;
+  }
+
+  .why_sec h2{
+    font-size: 18px !important;
+  }
+
+  /* .why_sec img{
+    width: 20%;
+  } */
+
+  .info-box {
+    padding: 80px 20px 40px !important;
+  }
+
+  .custom-responsive {
+    padding: 0px !important;
+  }
+  .custom-responsive .col {
+    padding: 0px !important;
+  }
+  .work-card{   
+    padding: 15px !important ;
+    height: 320px !important;
+  }
+
+  .work-card p{
+    font-size: 15px !important;
+  }
+
+  .ab{
+    padding: 0px !important;
+  }
+
+  .abf{
+    padding: 30px 10px !important;
+  }
+
+  .abf p{
+    font-size: 13px !important;
+  }
+
+  .footer-bottom {
+    padding: 200px 20px 40px !important;
+    margin-top: 20px !important;
+  }
+
+  .footer-top p {
+    font-size: 13px;
+  }
+
+  .footer-top h2{
+    font-size: 1.5rem ;
+    padding-bottom: 10px;
+  }
+
+  .footer-top {  
+    padding: 40px 20px !important;
+  }
+
+  .ft_btn{
+    font-size: 14px !important;
+    padding: 10px 20px !important ;
+  }
+
+
+  .foot{
+    padding: 10px 40px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(10px); /* Apply background blur */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    max-width: 1300px;
+    margin: auto;
+    z-index: 11;
+  }
+  
+  .foot-wrapper {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    background: var(--red); /* Match the navbar background */
+    z-index: 1; /* Put it behind the navbar */
+    height: 80px; /* Adjust to fit the navbar height */
+  }
+  
+
+
+
+} 
+
+@media (max-width: 388px){
+  .work-card{   
+    padding-bottom: 0px !important ;
+    height: 280px !important;
+  }
+
+}
