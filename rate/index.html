@@ -39,7 +39,7 @@
                 <div class="container-fluid nev">
                 <a class="navbar-brand" href="/"><img src="/images/logo.svg" alt="logo" class="logo" width="80%"  /></a>         
                 <div class="tuff" >
-                    <a id="customLink" href="get-started.html" class="get_btn_dek"  style="text-decoration: none; color: var(--white); background-color: var(--blue); border-radius: 8px; padding: 10px 40px; font-size: 16px; font-weight: 700; " >Apply For Loan</a>
+                    <a id="customLink" href="https://track.fairloanscanada.com/click" class="get_btn_dek"  style="text-decoration: none; color: var(--white); background-color: var(--blue); border-radius: 8px; padding: 10px 40px; font-size: 16px; font-weight: 700; " >Apply For Loan</a>
                 </div>
                 </div>
                 </nav>
@@ -98,7 +98,7 @@
 
             <div class="col-lg-4 hero_btn" style="display: flex; align-items: center; justify-content:flex-end">
               <div>
-                  <a id="customLink2" href="get-started.html" class="ft_btn"
+                  <a id="customLink2" href="https://track.fairloanscanada.com/click" class="ft_btn"
                      style="margin-right: 7px; text-decoration: none; color: var(--white);
                             background-color: var(--blue); border-radius: 8px; 
                             padding: 10px 30px; font-size: 16px; font-weight: 700;">
@@ -203,37 +203,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP -->
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-          console.log("Script loaded and running!"); // Debugging log
-  
-          function updateURL(buttonId, newUrl) {
-              let button = document.getElementById(buttonId);
-              if (button) {
-                  button.addEventListener("click", function (event) {
-                      event.preventDefault();
-                      console.log(`Redirecting ${buttonId} to:`, newUrl); // Debugging log
-                      window.location.href = newUrl;  // ✅ Redirects while keeping query params
-                  });
-              } else {
-                  console.error(`Button with ID '${buttonId}' not found!`);
-              }
-          }
-  
-          let baseUrl = "/get-started/"; // ✅ Use absolute path
-          let queryParams = window.location.search; // ✅ Get query params from current URL
-  
-          if (!queryParams) {
-              queryParams = "?affiliate_id=1882&product_names=personal_loan"; // Fallback if no query params
-          }
-  
-          let fullUrl = baseUrl + queryParams; // ✅ Ensure query params are attached
-  
-          updateURL("customLink", fullUrl);
-          updateURL("customLink1", fullUrl);
-          updateURL("customLink2", fullUrl);
-      });
-    </script>
+    <script type="text/javascript" src="https://track.fairloanscanada.com/track.js?rtkcmpid=67e069178015b2a1bc55d9de"></script>
 
 
 </body>
